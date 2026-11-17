@@ -1,0 +1,75 @@
+/* ==========================================================================
+   Night: deep indigo and gold, like a masjid lit after Isha.
+   Switched on by js/theme.js (data-theme="dark" on <html>).
+   ========================================================================== */
+html.theming *,html.theming *::before,html.theming *::after{transition:background-color .4s ease,border-color .4s ease,color .4s ease!important}
+[data-theme=dark]{
+  color-scheme:dark;
+  --bg:#12112A; --white:#1C1B38; --ivory:#1E1D3B;
+  --ink:#F4EBDC; --ink-2:#B9AE9B;
+  --gold:#D9A866; --gold-deep:#E0B06E; --gold-dark:#F1CD93; --gold-soft:#2A2747; --gold-line:#38345A;
+  --on-gold:#FFFFFF;
+  --good:#7BD6A0; --good-bg:#16302A; --warn:#F3C766; --warn-bg:#352B16; --bad:#FF9A8B; --bad-bg:#3B1D2A;
+  --scrim:rgba(4,3,16,.66);
+  --shadow:0 1px 1px rgba(0,0,0,.25),0 18px 40px -18px rgba(0,0,0,.6);
+  --shadow-lg:0 2px 4px rgba(0,0,0,.3),0 30px 70px -24px rgba(0,0,0,.7);
+  --lustre:linear-gradient(135deg,#2C2A5C 0%,#201E47 45%,#1A1838 70%,#3A2B33 100%);
+  --lustre-btn:linear-gradient(180deg,#E3B676 0%,#C8914B 55%,#AE7837 100%);
+  --fz-merlon-bg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='14' viewBox='0 0 26 14'%3E%3Cpath d='M0 14V9.5H4.5V6H8V2.5H18V6H21.5V9.5H26V14Z' fill='%2312112A'/%3E%3C/svg%3E");
+}
+[data-theme=dark] body{background:var(--bg)}
+[data-theme=dark] ::selection{background:#5B4A2E;color:#fff}
+/* the night sky: indigo field, gold lattice, a soft lamp glow */
+[data-theme=dark] .goldfield{color:#F7EBD6}
+[data-theme=dark] .goldfield::before{opacity:.5;background-image:var(--fz-lattice-gold);mix-blend-mode:normal;filter:opacity(.38)}
+[data-theme=dark] .goldfield::after{background:radial-gradient(70% 55% at 50% 30%,rgba(217,168,102,.22),transparent 65%),radial-gradient(90% 70% at 100% 100%,rgba(0,0,0,.35),transparent 60%)}
+[data-theme=dark] .fz-sheen{background:conic-gradient(from 210deg at 50% 38%,transparent 0deg,rgba(241,205,147,.10) 30deg,transparent 70deg,transparent 180deg,rgba(241,205,147,.07) 220deg,transparent 260deg)}
+[data-theme=dark] .goldfield .eyebrow,[data-theme=dark] .goldfield .eyebrow::before{color:#F1CD93}
+[data-theme=dark] .goldfield .eyebrow::before{background-image:var(--fz-star-gold)}
+/* surfaces */
+[data-theme=dark] .card,[data-theme=dark] .panel,[data-theme=dark] .box,[data-theme=dark] .list,[data-theme=dark] .tablewrap,[data-theme=dark] .doc,
+[data-theme=dark] .rcard,[data-theme=dark] .status,[data-theme=dark] .auth-card{background:var(--ivory);border-color:var(--gold-line)}
+[data-theme=dark] .btn{background:linear-gradient(180deg,#25244A,#1F1E3E);border-color:var(--gold-line);color:var(--ink);box-shadow:0 1px 0 rgba(255,255,255,.05) inset}
+[data-theme=dark] .btn:hover{border-color:#6A5A3E}
+[data-theme=dark] .btn.gold,[data-theme=dark] .chip[aria-pressed="true"],[data-theme=dark] .gate-go{background:var(--lustre-btn);color:#1A1424;border-color:#9C6B30;text-shadow:none}
+[data-theme=dark] .btn.ghost{background:transparent;box-shadow:none;color:var(--gold-deep)}
+[data-theme=dark] .btn.danger{background:#22213F;color:var(--bad);border-color:#5A3040}
+[data-theme=dark] .btn.armed{background:var(--bad);color:#1A1424}
+[data-theme=dark] .input,[data-theme=dark] .field input,[data-theme=dark] .field select,[data-theme=dark] .field textarea{background:#16152F;border-color:var(--gold-line);color:var(--ink)}
+[data-theme=dark] input::placeholder,[data-theme=dark] textarea::placeholder{color:#7F7690}
+[data-theme=dark] .chip{background:#1E1D3B;color:var(--ink-2);border-color:var(--gold-line)}
+[data-theme=dark] .pill.plain{background:#2B2945;color:var(--ink-2)}
+[data-theme=dark] .demo{background:#0A0918}
+[data-theme=dark] .topbar{background:rgba(22,21,46,.9)}
+[data-theme=dark] .bnav-in{background:rgba(22,21,46,.92)}
+[data-theme=dark] .bnav button[aria-current="page"]{background:linear-gradient(180deg,#2E2A4E,#26233F);color:var(--gold-dark)}
+[data-theme=dark] .tab[aria-selected="true"]{color:var(--gold-dark)}
+[data-theme=dark] .auth-main{background-color:#16152F}
+[data-theme=dark] .auth-main::before{background:radial-gradient(60% 60% at 50% 45%,#16152F 30%,rgba(22,21,47,.9) 70%,rgba(22,21,47,.75))}
+[data-theme=dark] body:has(#app:not([hidden])):not(.in-app)::before{background:linear-gradient(180deg,rgba(18,17,42,.93),rgba(18,17,42,.97))}
+[data-theme=dark] .row:hover,[data-theme=dark] .prow:hover{background:#232244}
+[data-theme=dark] .summary .card.collected{background:linear-gradient(180deg,#22213F,#1E1D3B)}
+[data-theme=dark] .bar,[data-theme=dark] .mbar,[data-theme=dark] .gbar,[data-theme=dark] .qbar,[data-theme=dark] .kbar{background:#2C2A4A}
+[data-theme=dark] .av{background:radial-gradient(circle at 30% 25%,#3A3358,#2A2645);color:var(--gold-dark);box-shadow:0 0 0 1px #4A4066 inset}
+[data-theme=dark] .toast{background:linear-gradient(180deg,#2A2850,#1F1D3F);border-color:rgba(217,168,102,.35);color:#F4EBDC}
+[data-theme=dark] .sheet{background:var(--bg)}
+[data-theme=dark] .gate-svg .g-fill{fill:#1C1B38}
+[data-theme=dark] .gate-svg .g-inner{fill:#1F1E3E;stroke:#6E5A3A}
+[data-theme=dark] .gate:hover .g-inner{fill:#26244A}
+[data-theme=dark] .gate-svg .g-line{stroke:#D9A866}
+[data-theme=dark] .gate{color:var(--ink)}
+[data-theme=dark] .lb li{background:#1A1936}
+[data-theme=dark] .lb li.m1{background:linear-gradient(90deg,#3A3020,#1A1936)}
+[data-theme=dark] .jz span,[data-theme=dark] .pick,[data-theme=dark] .rp span,[data-theme=dark] .tick,[data-theme=dark] .certchip{background:#1A1936;border-color:var(--gold-line);color:var(--ink-2)}
+[data-theme=dark] .certchip{color:var(--gold-dark)}
+[data-theme=dark] .certchip.all{background:var(--lustre-btn);color:#1A1424}
+[data-theme=dark] .pick:has(input:checked),[data-theme=dark] .rp input:checked+span{background:#2E2A4E}
+[data-theme=dark] .bulkbar{background:#0B0A1C;border:1px solid var(--gold-line)}
+[data-theme=dark] .ikdate{background:#2A2747;color:var(--gold-dark)}
+[data-theme=dark] table.grid,[data-theme=dark] table.grid th{background:var(--ivory)}
+[data-theme=dark] table.grid th{background:#26244A;color:var(--gold-dark)}
+[data-theme=dark] .receipt{background:#FFFDF8;color:#2E2113}
+[data-theme=dark] .brand .mark{background:var(--lustre-btn)}
+[data-theme=dark] .fz-tiraz,[data-theme=dark] .topbar::after,[data-theme=dark] .sheet-head::after,[data-theme=dark] .bnav-in::before,[data-theme=dark] .auth-card::before{opacity:.5}
+/* printing always uses paper colours */
+@media print{[data-theme=dark] body{background:#fff}}
